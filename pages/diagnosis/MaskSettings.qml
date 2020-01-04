@@ -28,15 +28,15 @@ Rectangle {
 
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: mask_notification_error
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            tableView.updateEventMaskTable();
-            // console.debug("QML::MaskSettings updatePage")
-            page_manager.updatePageDone();
-        }
-    }
+//    Connections {
+//        target: mask_notification_error
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            tableView.updateEventMaskTable();
+//            // console.debug("QML::MaskSettings updatePage")
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     H2oTableView {
         id: tableView

@@ -12,6 +12,8 @@ DBUS_ADAPTORS += utilities/termserver.xml
 
 DEFINES +=TORATEX_TS
 
+DEFINES+=PC_X86
+
 CONFIG += qmltestcase
 
 CODECFORTR = UTF-8
@@ -19,8 +21,6 @@ CODECFORTR = UTF-8
 SOURCES += main.cpp \
     utilities/systime.cpp \
     utilities/common.cpp \
-    utilities/upgrade.cpp \
-    utilities/logexport.cpp \
     utilities/translator.cpp \
     utilities/backlight.cpp \
     utilities/networkinterface.cpp \
@@ -65,8 +65,6 @@ INSTALLS += target
 HEADERS += \
     utilities/systime.h \
     utilities/common.h \
-    utilities/upgrade.h \
-    utilities/logexport.h \
     utilities/translator.h \
     utilities/backlight.h \
     utilities/networkinterface.h \
@@ -101,7 +99,7 @@ TRANSLATIONS += language/rainbow_zh.ts \
 
 if(contains(DEFINES,PC_X86)) {
     message("compile for PC")
-    LIBS +=  -L$$PWD/probeinterface/release/lib/x86 -lprobeinterface -lcrypt
+    LIBS +=  -L$$PWD/probeinterface/release/lib/x86 -lcrypt
     INCLUDEPATH += $$PWD/probeinterface/
     DEPENDPATH += $$PWD/probeinterface/
 }

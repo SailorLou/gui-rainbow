@@ -50,7 +50,7 @@ Rectangle {
                 dropArea.visible = false
                 background.visible = false
                 arrow.rotation = 0
-                //console.debug("background closed")
+                console.debug("background closed")
             }
         }
     }

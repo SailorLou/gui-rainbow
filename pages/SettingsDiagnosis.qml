@@ -52,7 +52,7 @@ Rectangle {
                 if(objName.length > 0) {
                     var pageName = mainStackView.currentItem.objectName;
                     if(pageName == "settings_diagnosis") {
-                        page_manager.startUpdate(root.pageName[tabView.currentIndex])
+                        //page_manager.startUpdate(root.pageName[tabView.currentIndex])
                     }
                 }
             }
@@ -72,7 +72,7 @@ Rectangle {
         viewList: tabList
         titleList: tabTitles
         onCurrentIndexChanged: {
-            page_manager.startUpdate(root.pageName[tabView.currentIndex])
+            //page_manager.startUpdate(root.pageName[tabView.currentIndex])
         }
     }
 }

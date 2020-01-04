@@ -23,16 +23,16 @@ Item {
     height: 360
     objectName: "leakage power page"
 
-    Connections {
-        target: status_page3
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage status.page3")
-            tableView.updateModel();
+//    Connections {
+//        target: status_page3
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage status.page3")
+//            tableView.updateModel();
 
-            page_manager.updatePageDone();
-        }
-    }
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     H2oTableView {
         id: tableView

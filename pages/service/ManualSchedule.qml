@@ -37,97 +37,97 @@ Rectangle {
 
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: maintenance_manual
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage maintenance.manual")
+//    Connections {
+//        target: maintenance_manual
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage maintenance.manual")
 
-            var status = actionStatus();
-            switch(status)
-            {
-            case "running":
-                if(usrAction == "start") {
-                    waitTimer.stop();
-                    mainBusyDialog.close();
+//            var status = actionStatus();
+//            switch(status)
+//            {
+//            case "running":
+//                if(usrAction == "start") {
+//                    waitTimer.stop();
+//                    mainBusyDialog.close();
 
-                    // goto started mode
-                    usrAction = "started";
-                }
+//                    // goto started mode
+//                    usrAction = "started";
+//                }
 
-                // disable edit mode
-                editMode = false;
+//                // disable edit mode
+//                editMode = false;
 
-                // update task status
-                updateActionTable();
-                break;
-            case "done":
-                // if done goto edit mode
-                if(editMode == false)
-                {
-                    isNeedDelDoneAction = true;
-                    editMode = true;
-                    updateActionTable();
-                }
+//                // update task status
+//                updateActionTable();
+//                break;
+//            case "done":
+//                // if done goto edit mode
+//                if(editMode == false)
+//                {
+//                    isNeedDelDoneAction = true;
+//                    editMode = true;
+//                    updateActionTable();
+//                }
 
-                // "start schedule"/"stop schedule" action hasn't "running" status and it goes to "done" after executed immediately.
-                // For these action, restore idle from busy status.
-                if(usrAction == "start")
-                {
-                    isNeedDelDoneAction = true;
-                    usrAction = "wait"; //wait for list update
-                    editMode = false;
-                } else if(usrAction == "wait") {
-                    waitTimer.stop();
-                    mainBusyDialog.close();
-                    updateActionTable();
-                    usrAction = "";
-                    editMode = true;
-                }
+//                // "start schedule"/"stop schedule" action hasn't "running" status and it goes to "done" after executed immediately.
+//                // For these action, restore idle from busy status.
+//                if(usrAction == "start")
+//                {
+//                    isNeedDelDoneAction = true;
+//                    usrAction = "wait"; //wait for list update
+//                    editMode = false;
+//                } else if(usrAction == "wait") {
+//                    waitTimer.stop();
+//                    mainBusyDialog.close();
+//                    updateActionTable();
+//                    usrAction = "";
+//                    editMode = true;
+//                }
 
-                break;
-            case "none":
+//                break;
+//            case "none":
 
-                // if usrAction == "started" and "none" case means the schedule task is stopped
-                // by clicking the start/stop button in home page.
-                if(usrAction == "stop" || usrAction == "started")
-                {
-                    waitTimer.stop();
-                    mainBusyDialog.close();
-                    usrAction = "";
+//                // if usrAction == "started" and "none" case means the schedule task is stopped
+//                // by clicking the start/stop button in home page.
+//                if(usrAction == "stop" || usrAction == "started")
+//                {
+//                    waitTimer.stop();
+//                    mainBusyDialog.close();
+//                    usrAction = "";
 
-                    // goto edit mode
-                    if(editMode == false) {
-                        clearAction();
-                        editMode = true;
-                    }
-                }
-                else if(usrAction == "start")
-                {
-                    console.debug("QML::ManualSchedule start");
-                    // wait for schedule running
-                }
-                else if(usrAction == "init")
-                {
-                    editMode = true;
-                    usrAction = "";
-                }
+//                    // goto edit mode
+//                    if(editMode == false) {
+//                        clearAction();
+//                        editMode = true;
+//                    }
+//                }
+//                else if(usrAction == "start")
+//                {
+//                    console.debug("QML::ManualSchedule start");
+//                    // wait for schedule running
+//                }
+//                else if(usrAction == "init")
+//                {
+//                    editMode = true;
+//                    usrAction = "";
+//                }
 
-                break;
+//                break;
 
-            case "error":
-                // ignore
-                break;
-            }
+//            case "error":
+//                // ignore
+//                break;
+//            }
 
-            /*initial range list*/
-            rangeList.updateRangeList();
+//            /*initial range list*/
+//            rangeList.updateRangeList();
 
-            // console.debug("QML::ManualSchedule onProbeUpdateDone")
+//            // console.debug("QML::ManualSchedule onProbeUpdateDone")
 
-            page_manager.updatePageDone();
-        }
-    }
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     function clearEditList() {
         editIndex = 0;

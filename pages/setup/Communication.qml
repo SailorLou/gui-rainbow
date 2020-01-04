@@ -26,26 +26,26 @@ Rectangle {
 
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: io_modbus
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage io.modbus")
-            modbusDeviceID.updateDeviceID();
-            baudrateList.updateBaudrate();
-	    startAddrList.updateStartAddr();
-            page_manager.updatePageDone();
-        }
-    }
+//    Connections {
+//        target: io_modbus
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage io.modbus")
+//            modbusDeviceID.updateDeviceID();
+//            baudrateList.updateBaudrate();
+//	    startAddrList.updateStartAddr();
+//            page_manager.updatePageDone();
+//        }
+//    }
 
-    Connections {
-        target: latest2_measure
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            hj212Format.updateHj212Format();
-            page_manager.updatePageDone();
-        }
-    }
+//    Connections {
+//        target: latest2_measure
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            hj212Format.updateHj212Format();
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     Text {
         id: devidText

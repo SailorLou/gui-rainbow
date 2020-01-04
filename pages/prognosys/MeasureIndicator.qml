@@ -25,16 +25,16 @@ Rectangle {
     objectName: "measure indictor"
     property string title: qsTr("Measure Indicator")+translator.tr
 
-    Connections {
-        target: prognosys_measure
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
+//    Connections {
+//        target: prognosys_measure
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
 
-            tableView.updateModel();
-            page_manager.updatePageDone();
-            console.debug("QML::MeasureIndicator update page")
-        }
-    }
+//            tableView.updateModel();
+//            page_manager.updatePageDone();
+//            console.debug("QML::MeasureIndicator update page")
+//        }
+//    }
 
     H2oTableView {
         id: tableView

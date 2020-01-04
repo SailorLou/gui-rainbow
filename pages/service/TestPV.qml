@@ -30,18 +30,18 @@ Rectangle{
     property real valveStatus: 0
     property bool busyStatus: false
 
-    Connections {
-        target: test_pv
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            //console.debug("QML::UpdatePage Test-PV")
-            absTableView.updateAbs();
-            tempTableView.updateTemp();
-            valveRepeater.updateValve();
-            setBusyStatus();
-            page_manager.updatePageDone();
-        }
-    }
+    //Connections {
+    //    target: test_pv
+    //    ignoreUnknownSignals: true
+    //    onProbeUpdateDone: {
+    //        //console.debug("QML::UpdatePage Test-PV")
+    //        absTableView.updateAbs();
+    //        tempTableView.updateTemp();
+    //        valveRepeater.updateValve();
+    //        setBusyStatus();
+    //        page_manager.updatePageDone();
+    //    }
+    //}
 
     function setBusyStatus() {
         var b = test_pv.getObjBool("busy");

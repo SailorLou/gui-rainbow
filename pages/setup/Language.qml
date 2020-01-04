@@ -92,10 +92,10 @@ Item {
 
                 if(!hasSetting) {
                     value = "ZH";
-                    local_settings.setValue("system", "language", value);
+                    //local_settings.setValue("system", "language", value);
                 }
 
-                listView.contentItem.children[listView.currentIndex].checked = true;
+                //listView.contentItem.children[listView.currentIndex].checked = true;
             }
 
             Component.onCompleted: {

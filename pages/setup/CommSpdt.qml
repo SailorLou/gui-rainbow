@@ -28,21 +28,21 @@ Rectangle {
     property string title: qsTr("IO Setup")+translator.tr
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: io_spdt
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage io.spdt");
-            spdtStatus.updateIOStatus();
-            ch1Output.updateCh1Output();
-            //ch1Pretreat.updateCh1Pretreat();
-            ch2Output.updateCh2Output();
-            mainStackView.push({item: root, immediate: true})
-
-            //ch2Pretreat.updateCh2Pretreat();
-            page_manager.updatePageDone();
-        }
-    }
+   //Connections {
+   //    target: io_spdt
+   //    ignoreUnknownSignals: true
+   //    onProbeUpdateDone: {
+   //        console.debug("QML::UpdatePage io.spdt");
+   //        spdtStatus.updateIOStatus();
+   //        ch1Output.updateCh1Output();
+   //        //ch1Pretreat.updateCh1Pretreat();
+   //        ch2Output.updateCh2Output();
+   //        mainStackView.push({item: root, immediate: true})
+   //
+   //        //ch2Pretreat.updateCh2Pretreat();
+   //        page_manager.updatePageDone();
+   //    }
+   //}
 
     Rectangle {
         id: title
@@ -174,12 +174,12 @@ Rectangle {
 
             function updateCh1Output()
             {
-                var i = io_spdt.getObjInt("ch1output");
+                //var i = io_spdt.getObjInt("ch1output");
                 //ch1OutputList.setProperty(i, "check", true);
-                if(i > 0) {
-                    ch1Output.currentIndex = i-1;
-                    ch1Output.contentItem.children[ch1Output.currentIndex].checked = true;
-                }
+                //f(i > 0) {
+                 //   ch1Output.currentIndex = i-1;
+                //    ch1Output.contentItem.children[ch1Output.currentIndex].checked = true;
+                //
             }
 
             Component.onCompleted: {
@@ -307,12 +307,12 @@ Rectangle {
 
             function updateCh2Output()
             {
-                var i = io_spdt.getObjInt("ch2output");
+                //var i = io_spdt.getObjInt("ch2output");
                 //ch2OutputList.setProperty(i, "check", true);
-                if(i > 0) {
-                    ch2Output.currentIndex = i-1;
-                    ch2Output.contentItem.children[ch2Output.currentIndex].checked = true;
-                }
+                //if(i > 0) {
+                //    ch2Output.currentIndex = i-1;
+                //    ch2Output.contentItem.children[ch2Output.currentIndex].checked = true;
+                //}
             }
 
             Component.onCompleted: {

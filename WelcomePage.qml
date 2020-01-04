@@ -29,13 +29,13 @@ Rectangle {
 
     property int step: 0
 
-    Connections {
-        target: startup_initial  //software update page
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            page_manager.updatePageDone();
-        }
-    }
+//    Connections {
+//        target: startup_initial  //software update page
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     /*Image {
         id: hachLog
@@ -49,7 +49,7 @@ Rectangle {
     function init()
     {
         // var inital = local_settings.getValueBool("startup", "initial", true);
-        var inital = startup_initial.getObjBool("flag");
+        var inital = true;
          console.debug("QML::WelcomePage inital: "+inital)
         if(inital === false) {
             //hachLog.visible = false;
@@ -104,7 +104,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.leftMargin: 20
                 verticalAlignment: Image.AlignVCenter
-                source: "qrc:///resources/images/hach-logo.png"
+                //source: "qrc:///resources/images/hach-logo.png"
                 width: 100
                 height: 60
             }
@@ -169,7 +169,7 @@ Rectangle {
             titleList: content.tabTitles
             onCurrentIndexChanged: {
                 var pageName = tabView.model.get(currentIndex).pageName;
-                page_manager.startUpdate(pageName);
+                //page_manager.startUpdate(pageName);
 
                 if(content.tabList[tabView.currentIndex].updateData !== undefined) {
                     content.tabList[tabView.currentIndex].updateData();

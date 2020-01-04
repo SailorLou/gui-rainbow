@@ -49,7 +49,7 @@ Rectangle {
                 if(objName.length > 0) {
                     var pageName = mainStackView.currentItem.objectName;
                     if(pageName == "prog settings") {
-                        page_manager.startUpdate(root.pageName[tabView.currentIndex])
+                        //page_manager.startUpdate(root.pageName[tabView.currentIndex])
                     }
                 }
             }
@@ -68,7 +68,7 @@ Rectangle {
         viewList: tabList
         titleList: tabTitles
         onCurrentIndexChanged: {
-            page_manager.startUpdate(root.pageName[tabView.currentIndex])
+            //page_manager.startUpdate(root.pageName[tabView.currentIndex])
         }
     }
 }

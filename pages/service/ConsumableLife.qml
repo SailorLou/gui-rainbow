@@ -27,20 +27,20 @@ Rectangle {
 
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: prognosys_service
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
+//    Connections {
+//        target: prognosys_service
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
 
-            tableView.updateModel();
-            page_manager.updatePageDone();
-            console.debug("QML::ServiceIndicator update page")
-        }
+//            tableView.updateModel();
+//            page_manager.updatePageDone();
+//            console.debug("QML::ServiceIndicator update page")
+//        }
 
-        onProbeSetObjsDone: {
-            page_manager.startUpdate("prognosys.service");
-        }
-    }
+//        onProbeSetObjsDone: {
+//            page_manager.startUpdate("prognosys.service");
+//        }
+//    }
 
     H2oTableView {
         id: tableView

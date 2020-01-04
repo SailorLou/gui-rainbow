@@ -16,10 +16,10 @@ ApplicationWindow {
     title: qsTr("Hello Rainbow")
     color: "#f2f2f2"
 
-    Image {
-        id: image
-        source: "qrc:///resources/images/Hach_login_image.png"
-    }
+    //Image {
+    //   id: image
+        //source: "qrc:///resources/images/Hach_login_image.png"
+    //}
 
     BusyIndicator {
         id: busyIndicator
@@ -29,6 +29,8 @@ ApplicationWindow {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 20
+        running: false;
+        visible: false;
 
 
     }
@@ -38,7 +40,7 @@ ApplicationWindow {
         // console.debug("QML::main close");
         busyIndicator.running = false;
         busyIndicator.visible = false;
-        image.visible = false;
+        //image.visible = false;
         mouseArea.visible = false;
     }
 
@@ -46,8 +48,15 @@ ApplicationWindow {
         var compon = Qt.createComponent("ContentWindow.qml")
         //Incubators allow new component instances to be instantiated asynchronously and do not cause freezes in the UI.
         var obj = compon.createObject(mainWindow, {"mainWnd": mainWindow} );
-        //var obj = compon.incubateObject(mainWindow);
+        var obj = compon.incubateObject(mainWindow);
+        mainWindow.closeWindow()
     }
+
+    //ContentWindow {
+        //anchors.fill: parent
+    //    visible : true;
+
+    //}
 
     MouseArea {
         id: mouseArea

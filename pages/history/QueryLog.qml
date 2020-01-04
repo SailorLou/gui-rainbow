@@ -36,22 +36,22 @@ Rectangle {
         z: 1
     }
 
-    Connections {
-        target: log_filter
-        ignoreUnknownSignals: true
-        onProbeSetObjsDone: {
-            /*console.debug("QML::QueryLog log_filter ")
-            //updateLogDetail();
-            mainStackView.push({item: logView, immediate: true})
-            var title = ["*.time", "*.summary", "ID"];
+//    Connections {
+//        target: log_filter
+//        ignoreUnknownSignals: true
+//        onProbeSetObjsDone: {
+//            /*console.debug("QML::QueryLog log_filter ")
+//            //updateLogDetail();
+//            mainStackView.push({item: logView, immediate: true})
+//            var title = ["*.time", "*.summary", "ID"];
 
-            console.debug("QML::QueryLog setFilterTypeList: "+filterSettings.setFilterTypeList)
-            var param = {"title": title, "start": -1, "count": 20000, "type": filterSettings.setFilterTypeList, "orderby": "lambda x: (datetime.datetime.strptime(x[1],'%Y-%m-%d %H:%M:%S'),x[3])", "desc": true }; // x[0] - type; x[1] - time
-            log_view.setObj("read_data", param);*/
+//            console.debug("QML::QueryLog setFilterTypeList: "+filterSettings.setFilterTypeList)
+//            var param = {"title": title, "start": -1, "count": 20000, "type": filterSettings.setFilterTypeList, "orderby": "lambda x: (datetime.datetime.strptime(x[1],'%Y-%m-%d %H:%M:%S'),x[3])", "desc": true }; // x[0] - type; x[1] - time
+//            log_view.setObj("read_data", param);*/
 
-            startReadTimer.start();
-        }
-    }
+//            startReadTimer.start();
+//        }
+//    }
 
     Timer {
         id: startReadTimer
@@ -330,7 +330,7 @@ Rectangle {
             // set filter range
             //root.setFilter();
             if(filterSettings.setFilter(log_filter)) {
-                page_manager.setTimerRunning(false);
+                //page_manager.setTimerRunning(false);
                 mainBusyDialog.open(qsTr("Log Filtering..."));
             }
        }

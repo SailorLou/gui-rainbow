@@ -24,14 +24,14 @@ Rectangle {
     width: 800
     height: 420
 
-    Connections {
-        target: log_detail
-        ignoreUnknownSignals: true
-        onProbeSetObjDone: {
-            //console.debug("QML::LogSummary SetObjDone log_detail")
-            updateLogDetail();
-        }
-    }
+//    Connections {
+//        target: log_detail
+//        ignoreUnknownSignals: true
+//        onProbeSetObjDone: {
+//            //console.debug("QML::LogSummary SetObjDone log_detail")
+//            updateLogDetail();
+//        }
+//    }
 
     function updateLogDetail() {
         tableView.positionViewAtRow(0, ListView.Beginning)

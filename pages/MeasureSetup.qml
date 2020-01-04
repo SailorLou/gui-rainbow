@@ -56,7 +56,7 @@ Rectangle {
                 if(objName.length > 0) {
                     var pageName = mainStackView.currentItem.objectName;
                     if(pageName == "measure_setup") {
-                        page_manager.startUpdate(root.pageName[tabView.currentIndex])
+                        //page_manager.startUpdate(root.pageName[tabView.currentIndex])
                     }
 
                     var index = mainNaviPage.currentPageIndex();
@@ -87,7 +87,7 @@ Rectangle {
         viewList: tabList
         titleList: tabTitles
         onCurrentIndexChanged: {
-            page_manager.startUpdate(root.pageName[tabView.currentIndex])
+            //page_manager.startUpdate(root.pageName[tabView.currentIndex])
 
             if(model.get(tabView.preIndex).name === "Schedule" && schedulePage.timeBtnEnabled)
             {

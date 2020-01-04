@@ -24,24 +24,24 @@ Rectangle {
 
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: measure_bias
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage measure.bias")
-            factorULR.updateULRFactor();
-            offsetULR.updateULROffset();
-            factorLR.updateLRFactor();
-            offsetLR.updateLROffset();
-            factorMR.updateMRFactor();
-            offsetMR.updateMROffset();
-            factorHR.updateHRFactor();
-            offsetHR.updateHROffset();
-            textHR.updateVisable();
-
-            page_manager.updatePageDone();
-        }
-    }
+    //Connections {
+    //    target: measure_bias
+    //    ignoreUnknownSignals: true
+    //    onProbeUpdateDone: {
+    //        console.debug("QML::UpdatePage measure.bias")
+    //        factorULR.updateULRFactor();
+    //        offsetULR.updateULROffset();
+    //        factorLR.updateLRFactor();
+    //        offsetLR.updateLROffset();
+    //        factorMR.updateMRFactor();
+    //        offsetMR.updateMROffset();
+    //        factorHR.updateHRFactor();
+    //        offsetHR.updateHROffset();
+    //        textHR.updateVisable();
+    //
+    //        page_manager.updatePageDone();
+    //    }
+    //}
 
     signal debugMessage(string message, string operate)
 

@@ -31,19 +31,19 @@ Rectangle{
     property var busyStatus
     property int busyUpdateIndex: 0
 
-    Connections {
-        target: test_substep
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage Test-PV")
-            valveRepeater.updateValve();
-            absTableView.updateAbs();
-            tempTableView.updateTemp();
-            rangeDropBox.updateRangeType();
-            page_manager.updatePageDone();
-            getBusyStatus();
-        }
-    }
+    //Connections {
+    //    target: test_substep
+    //    ignoreUnknownSignals: true
+    //    onProbeUpdateDone: {
+    //        console.debug("QML::UpdatePage Test-PV")
+    //        valveRepeater.updateValve();
+    //        absTableView.updateAbs();
+    //        tempTableView.updateTemp();
+    //        rangeDropBox.updateRangeType();
+    //        page_manager.updatePageDone();
+    //        getBusyStatus();
+    //    }
+    //}
 
     function getBusyStatus()
     {

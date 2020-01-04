@@ -36,7 +36,7 @@ Rectangle {
             mainStackView.push({item: viewList[index], immediate: true });
             var pageName = listModel.get(index).pageName;
             if(pageName !== undefined) {
-                page_manager.startUpdate(pageName);
+                //page_manager.startUpdate(pageName);
             }
         }
     }
@@ -60,7 +60,7 @@ Rectangle {
                 mainStackView.push({item: root.viewList[index], immediate: true})
                 root.currentIndex = index;
                 if(pageName != "") {
-                    page_manager.startUpdate(pageName);
+                    //page_manager.startUpdate(pageName);
                 }
             }
         }

@@ -23,16 +23,16 @@ Item {
     height: 360
     objectName: "measure sample page"
 
-    Connections {
-        target: status_page1
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage status.page1")
-            tableView.updateModel();
+//    Connections {
+//        target: status_page1
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage status.page1")
+//            tableView.updateModel();
 
-            page_manager.updatePageDone();
-        }
-    }
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     H2oTableView {
         id: tableView

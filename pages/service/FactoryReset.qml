@@ -30,20 +30,20 @@ Rectangle {
 
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: factory_reset
-        ignoreUnknownSignals: true
-        onProbeSetObjsDone: {
-            //mainCircleProgressDialog.text = qsTr("Reset...")
-            //mainCircleProgressDialog.visible = true
-            //console.debug("QML::Factory reset done flag:"+mainFactoryResetData.initial)
-
-            mainBusyDialog.close();
-            mainMessageDialogOneButton.type = "reminder";
-            mainMessageDialogOneButton.text = qsTr("Factory reset done.");
-            mainMessageDialogOneButton.open();
-        }
-    }
+    //Connections {
+    //    target: factory_reset
+    //    ignoreUnknownSignals: true
+    //    onProbeSetObjsDone: {
+    //        //mainCircleProgressDialog.text = qsTr("Reset...")
+    //        //mainCircleProgressDialog.visible = true
+    //        //console.debug("QML::Factory reset done flag:"+mainFactoryResetData.initial)
+    //
+    //        mainBusyDialog.close();
+    //        mainMessageDialogOneButton.type = "reminder";
+    //        mainMessageDialogOneButton.text = qsTr("Factory reset done.");
+    //        mainMessageDialogOneButton.open();
+    //    }
+    //}
 
     Text {
         id: title

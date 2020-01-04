@@ -23,17 +23,17 @@ Rectangle {
 
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: cleaning_mode
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage cleaning.mode")
-            listView.updateIndex();
-
-            page_manager.updatePageDone();
-        }
-    }
-
+    //Connections {
+    //    target: cleaning_mode
+    //    ignoreUnknownSignals: true
+    //    onProbeUpdateDone: {
+    //        console.debug("QML::UpdatePage cleaning.mode")
+    //        listView.updateIndex();
+    //
+    //        page_manager.updatePageDone();
+    //    }
+    //}
+    //
     Text {
         id: modeText
         anchors.left: parent.left

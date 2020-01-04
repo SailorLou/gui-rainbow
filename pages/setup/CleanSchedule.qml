@@ -27,19 +27,19 @@ Rectangle {
     enabled: mainPermisMgr.editabled
     property alias timeBtnEnabled: button.enabled
 
-    Connections {
-        target: cleaning_schedule
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage cleaning.schedule")
-            listView.updateIndex();
-            customizeTime.updateCustomTime();
-            //startTime.updateStartTime();
-            timeSetting.updateTime();
-            dateSetting.updateDate();
-            page_manager.updatePageDone();
-        }
-    }
+   //Connections {
+   //    target: cleaning_schedule
+   //    ignoreUnknownSignals: true
+   //    onProbeUpdateDone: {
+   //        console.debug("QML::UpdatePage cleaning.schedule")
+   //        listView.updateIndex();
+   //        customizeTime.updateCustomTime();
+   //        //startTime.updateStartTime();
+   //        timeSetting.updateTime();
+   //        dateSetting.updateDate();
+   //        page_manager.updatePageDone();
+   //    }
+   //}
 
     H2oExclusiveGroup {
         id: tabGroup

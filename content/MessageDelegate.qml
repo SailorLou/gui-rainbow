@@ -30,21 +30,21 @@ Item {
     signal mainWindowPopped(var objName);
     signal loginWindowPopped();
 
-    Connections {
-        target: current_measure
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            //if(mainStackView.depth > 1) {
-            //console.debug("QML::UpdatePage Message Delegate current.measure")
-            process.updateProcess();
-            subProcess.updateSubProcess();
-            progressBar.updateProgress();
-            remainTime.updateRemainTime();
-            refreshTimerTimeOut();
-            //}
+//    Connections {
+//        target: current_measure
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            //if(mainStackView.depth > 1) {
+//            //console.debug("QML::UpdatePage Message Delegate current.measure")
+//            process.updateProcess();
+//            subProcess.updateSubProcess();
+//            progressBar.updateProgress();
+//            remainTime.updateRemainTime();
+//            refreshTimerTimeOut();
+//            //}
 
-        }
-    }
+//        }
+//    }
 
     Connections {
         target: mainStackView
@@ -141,7 +141,7 @@ Item {
                             mainWindowPopped(objName);
                             // if in repeater page, clear the repeater page
                             if(mainStackView.depth > 2) {
-                                page_manager.startUpdate("");
+                                //page_manager.startUpdate("");
                             }
                             mainStackView.pop({immediate: true})
                         } else {

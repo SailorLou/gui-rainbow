@@ -25,20 +25,20 @@ Rectangle {
     visible: true
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: measure_mode
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage measure.mode")
-            listView.updateModeIndex();
-            averageTimes.updateAverageTimes();
-            retest.updateRetest();
-            highLimit.updateHighLimit();
-            lowLimit.updateLowLimit();
-            pretreatDelay.updatePretreat();
-            page_manager.updatePageDone();
-        }
-    }
+//    Connections {
+//        target: measure_mode
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage measure.mode")
+//            listView.updateModeIndex();
+//            averageTimes.updateAverageTimes();
+//            retest.updateRetest();
+//            highLimit.updateHighLimit();
+//            lowLimit.updateLowLimit();
+//            pretreatDelay.updatePretreat();
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     H2oExclusiveGroup {
         id: tabGroup

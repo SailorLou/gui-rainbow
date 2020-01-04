@@ -33,29 +33,29 @@ Rectangle{
     property bool checkBusy: false
     property bool initCheckBusy: false
 
-    Connections {
-        target: test_ad
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage Test-PV")
-            detectBusy();
-            tempTableView.updateTemp()
-            adTableView.updateAd()
-            page_manager.updatePageDone();
-        }
-    }
+    //Connections {
+    //    target: test_ad
+    //    ignoreUnknownSignals: true
+    //    onProbeUpdateDone: {
+    //        console.debug("QML::UpdatePage Test-PV")
+    //        detectBusy();
+    //        tempTableView.updateTemp()
+    //        adTableView.updateAd()
+    //        page_manager.updatePageDone();
+    //    }
+    //}
 
-    Connections {
-        target: test_ad
-        ignoreUnknownSignals: true
-        onProbeSetObjDone: {
-            if(objName == "fluid") {
-                 page_manager.startUpdate("test.ad");
-                initCheckBusy = false;
-                checkBusy = true;
-            }
-        }
-    }
+//    Connections {
+//        target: test_ad
+//        ignoreUnknownSignals: true
+//        onProbeSetObjDone: {
+//            if(objName == "fluid") {
+//                 page_manager.startUpdate("test.ad");
+//                initCheckBusy = false;
+//                checkBusy = true;
+//            }
+//        }
+//    }
 
     Text{
         id:tempAbsText
@@ -349,7 +349,7 @@ Rectangle{
                 processIndex++;
                 break;
             case 2: // The flow is preparing, please wait for a minute...
-                page_manager.stopCurrentRepeat();
+                //page_manager.stopCurrentRepeat();
                 test_ad.setObj("fluid", 1)
                 textWizard.text = qsTr(wizardText[processIndex]);
                 processIndex++;

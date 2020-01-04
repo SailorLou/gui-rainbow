@@ -38,16 +38,16 @@ Rectangle {
 
     signal switchToGraphic();
 
-    Connections {
-        target: log_view
-        ignoreUnknownSignals: true
-        onProbeSetObjDone: {
-            console.debug("QML::LogView SetObjDone log_query "+objName)
-            updateLogModel();
-            page_manager.setTimerRunning(true);
-            mainBusyDialog.close();
-        }
-    }
+//    Connections {
+//        target: log_view
+//        ignoreUnknownSignals: true
+//        onProbeSetObjDone: {
+//            console.debug("QML::LogView SetObjDone log_query "+objName)
+//            updateLogModel();
+//            page_manager.setTimerRunning(true);
+//            mainBusyDialog.close();
+//        }
+//    }
 
     function viewLogDetail(row) {
         // goto detail veiw and read detail data

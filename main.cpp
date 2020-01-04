@@ -22,7 +22,7 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 #include <QTextCodec>
-#include "probemanager.h"
+//#include "probemanager.h"
 #include "application.h"
 
 #include "utilities/common.h"
@@ -39,9 +39,8 @@
 #include "utilities/messageoutput.h"
 #include "utilities/watchdog.h"
 #include "utilities/systime.h"
-#include "utilities/upgrade.h"
+//#include "utilities/upgrade.h"
 #include "utilities/logstring.h"
-#include "utilities/logexport.h"
 #include "utilities/backlight.h"
 #include "utilities/panelleds.h"
 #include "utilities/file.h"
@@ -177,11 +176,11 @@ int main(int argc, char *argv[])
     Settings localSettings(context);
     QString lang = localSettings.getValueString("system", "language", "ZH");
 
-    ProbeManager probeManager(context);
-    probeManager.setAppVersion(APP_VERSION);
+    //ProbeManager probeManager(context);
+    //probeManager.setAppVersion(APP_VERSION);
 
-    probeManager.init(args);
-    JsonParse *jsonParse = probeManager.jsonParse();
+    //probeManager.init(args);
+    //JsonParse *jsonParse = probeManager.jsonParse();
 
     /* create utilities */
     File fileTool(&localSettings, context);
@@ -192,13 +191,13 @@ int main(int argc, char *argv[])
 
     Password password(context, &localSettings);
 
-    Upgrade upgrade(jsonParse, context, &fileTool, &localSettings);
+    //Upgrade upgrade(jsonParse, context, &fileTool, &localSettings);
 
     PanelLeds panelLeds(context);
 
     LogString logString(context);
 
-    LogExport logExport(&logString, jsonParse, context, &fileTool);
+    //LogExport logExport(&logString, jsonParse, context, &fileTool);
 
     ExecScript execScript(context, &fileTool);
 

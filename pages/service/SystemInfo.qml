@@ -21,19 +21,19 @@ import "../../content/time.js" as Time
 import "../../content/Strconvert.js" as StringConv
 
 Rectangle {
-    Connections {
-        target: system_info
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            // console.debug("QML::PageUpdate system_info")
-            /*mcuVersion.updateMcuVersion();
-            mcuSN.updateMcuSN();
-            daemonVersion.updateDaemonVersion();
-            modbusVer.updateModbusVer();*/
-            tableView.updateModel2();
-            page_manager.updatePageDone();
-        }
-    }
+    //Connections {
+    //    target: system_info
+    //    ignoreUnknownSignals: true
+    //    onProbeUpdateDone: {
+    //        // console.debug("QML::PageUpdate system_info")
+    //        /*mcuVersion.updateMcuVersion();
+    //        mcuSN.updateMcuSN();
+    //        daemonVersion.updateDaemonVersion();
+    //        modbusVer.updateModbusVer();*/
+    //        tableView.updateModel2();
+    //        page_manager.updatePageDone();
+    //    }
+    //}
 
     property var instrType: [
         QT_TRANSLATE_NOOP("H2oTableView", "Standard"),
@@ -91,9 +91,9 @@ Rectangle {
         }
 
         function updateModel() {
-            model.setProperty(0, "value", page_manager.mainVersion());
+            model.setProperty(0, "value", 1.0/*page_manager.mainVersion()*/);
 
-            model.setProperty(1, "value", page_manager.appVersion());
+            model.setProperty(1, "value", 2.0/*page_manager.appVersion()*/);
 
             model.setProperty(2, "value", system_info.getObjString("fw"));
 
@@ -125,7 +125,7 @@ Rectangle {
             if(type > 1) type = 0;
             model.append({ "item": qsTr("Instrument Type")+translator.tr, "value": instrType[type] });
             model.append({ "item": qsTr("MCU SN")+translator.tr, "value": system_info.getObjString("sn") });
-            model.append({ "item": qsTr("Software Version")+translator.tr, "value": page_manager.mainVersion() });
+            model.append({ "item": qsTr("Software Version")+translator.tr, "value": 3.0/*page_manager.mainVersion()*/ });
 
             var activeTime;
             var mcuTime = system_info.getObjInt("active_time");
@@ -146,7 +146,7 @@ Rectangle {
             //if(advInfoEn === "true") {
             var advInfoEn = mainPermisMgr.superperms;
             if(advInfoEn === true) {
-                model.append({ "item": qsTr("UI Software Version")+translator.tr, "value": page_manager.appVersion() });
+                model.append({ "item": qsTr("UI Software Version")+translator.tr, "value":4.0 /*page_manager.appVersion()*/ });
                 model.append({ "item": qsTr("MCU Software Version")+translator.tr, "value": system_info.getObjString("fw") });
                 model.append({ "item": qsTr("Probe Daemon Version")+translator.tr, "value": system_info.getObjString("version") });
                 model.append({ "item": qsTr("Modbus Daemon Version")+translator.tr, "value": io_modbus.getObjString("sw_version") });

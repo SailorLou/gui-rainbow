@@ -28,19 +28,19 @@ Rectangle {
     property string title: qsTr("IO Setup")+translator.tr
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: io_di
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage io.di")
-            diStatus.updateIOStatus();
-            ch1Mode.updateCh1Mode();
-            ch2Mode.updateCh2Mode();
+//    Connections {
+//        target: io_di
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage io.di")
+//            diStatus.updateIOStatus();
+//            ch1Mode.updateCh1Mode();
+//            ch2Mode.updateCh2Mode();
 
-            mainStackView.push({item: root, immediate: true})
-            page_manager.updatePageDone();
-        }
-    }
+//            mainStackView.push({item: root, immediate: true})
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     Rectangle {
         id: title

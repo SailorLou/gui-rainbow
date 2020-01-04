@@ -27,17 +27,17 @@ Rectangle{
     width: 800
     height: 370
 
-    Connections {
-        target: test_io
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage Test-PV")
-
-            listView.updateIOList();
-
-            page_manager.updatePageDone();
-        }
-    }
+    //Connections {
+    //    target: test_io
+    //    ignoreUnknownSignals: true
+    //    onProbeUpdateDone: {
+    //        console.debug("QML::UpdatePage Test-PV")
+    //
+    //        listView.updateIOList();
+    //
+    //        page_manager.updatePageDone();
+    //    }
+    //}
 
     Connections {
         target: mainMessage
@@ -73,14 +73,14 @@ Rectangle{
                 var temp = [mIndex, Number(ch1Value)*1000]
                 test_io.setObj("simu_ao_ch1", temp)
                 //listView.updateIOList()
-                page_manager.startUpdate("test.io")
+                //page_manager.startUpdate("test.io")
             }
 
             onAoCh2Clicked: {
                 var temp = [mIndex, Number(ch2Value)*1000]
                 test_io.setObj("simu_ao_ch2", temp)
                 //listView.updateIOList()
-                page_manager.startUpdate("test.io")
+                //page_manager.startUpdate("test.io")
 
             }
 

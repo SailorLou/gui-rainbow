@@ -24,20 +24,20 @@ Rectangle {
     enabled: mainPermisMgr.editabled
     property alias timeBtnEnabled: button.enabled
 
-    Connections {
-        target: measure_schedule
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage measure.schedule")
-            listView.updateIndex();
-            customizeTime.updateCustomTime();
-            //startTime.updateStartTime();
-            timeSetting.updateTime();
-            dateSetting.updateDate();
+//    Connections {
+//        target: measure_schedule
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage measure.schedule")
+//            listView.updateIndex();
+//            customizeTime.updateCustomTime();
+//            //startTime.updateStartTime();
+//            timeSetting.updateTime();
+//            dateSetting.updateDate();
 
-            page_manager.updatePageDone();
-        }
-    }
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     signal debugMessage(string message, string operate)
     width: 800

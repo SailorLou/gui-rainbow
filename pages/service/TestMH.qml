@@ -27,17 +27,17 @@ Rectangle{
     width: 800
     height: 360
 
-    Connections {
-        target: test_mh
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage Test-PV")
-            absTableView.updateAbs();
-            tempTableView.updateTemp();
+//    Connections {
+//        target: test_mh
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage Test-PV")
+//            absTableView.updateAbs();
+//            tempTableView.updateTemp();
 
-            page_manager.updatePageDone();
-        }
-    }
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     Text{
         id:mixerText

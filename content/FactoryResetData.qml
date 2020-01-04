@@ -40,7 +40,7 @@ Item {
 
         var setPageList = ["factory.reset", "startup.initial"];
 
-        page_manager.startSetPageList(setPageList);
+        //page_manager.startSetPageList(setPageList);
     }
 
     function initCompleted()

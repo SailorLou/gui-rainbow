@@ -65,55 +65,55 @@ Item {
         ListElement { code: 42; exist: false }
     }
 
-    Connections {
-        target: notification_error
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            updateModel(false);
-            //console.debug("QML::NotifyDialog error")
+//    Connections {
+//        target: notification_error
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            updateModel(false);
+//            //console.debug("QML::NotifyDialog error")
 
-            page_manager.updatePageDone();
-        }
-    }
+//            page_manager.updatePageDone();
+//        }
+//    }
 
-    Connections {
-        target: notification_error_s
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            page_manager.updatePageDone();
-        }
-    }
+//    Connections {
+//        target: notification_error_s
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            page_manager.updatePageDone();
+//        }
+//    }
 
-    Connections {
-        target: if_probe
-        ignoreUnknownSignals: true
-        onProbeIfWriteError: {
-            console.debug("QML::ProbeIfWriteError: "+errCode);
+//    Connections {
+//        target: if_probe
+//        ignoreUnknownSignals: true
+//        onProbeIfWriteError: {
+//            console.debug("QML::ProbeIfWriteError: "+errCode);
 
-            messageDialog.type = "warning";
-            messageDialog.text = qsTr("Probe Communication failed. Error: ")+translator.tr+errCode;
-            messageDialog.open();
+//            messageDialog.type = "warning";
+//            messageDialog.text = qsTr("Probe Communication failed. Error: ")+translator.tr+errCode;
+//            messageDialog.open();
 
-        }
+//        }
 
-        onProbeIfError: { // timeout and disconnected.
+//        onProbeIfError: { // timeout and disconnected.
 
-            if(errCode == "timeout" || errCode == "dbus err") {
-                page_manager.setInitPage(false);
-                page_manager.setTimerRepeat(false);
-                probe_worker.stopWork();
+//            if(errCode == "timeout" || errCode == "dbus err") {
+//                page_manager.setInitPage(false);
+//                page_manager.setTimerRepeat(false);
+//                probe_worker.stopWork();
 
-                //Add probe comm err to list
-                //0 - Probe communication error
-                //3 - error type
-                if(getErrInNotifyErrList(0) !== true)
-                {
-                    setErrInNotifyErrList(0, true, 3);
-                    updateModel(true);
-                }
-            }
-        }
-    }
+//                //Add probe comm err to list
+//                //0 - Probe communication error
+//                //3 - error type
+//                if(getErrInNotifyErrList(0) !== true)
+//                {
+//                    setErrInNotifyErrList(0, true, 3);
+//                    updateModel(true);
+//                }
+//            }
+//        }
+//    }
 
 //    Connections {
 //        target: if_probe
@@ -163,7 +163,7 @@ Item {
             //3 - error type
             setErrInNotifyErrList(0, false, 3);
 
-            page_manager.setTimerRepeat(true);
+            //page_manager.setTimerRepeat(true);
         }
     }
 

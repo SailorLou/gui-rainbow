@@ -26,16 +26,16 @@ Item {
     enabled: mainPermisMgr.editabled
     property alias timeBtnEnabled: button.enabled
 
-    Connections {
-        target: system_info
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage system_info")
-            timeSetting.updateTime();
-            dateSetting.updateDate();
-            //page_manager.updatePageDone();
-        }
-    }
+//    Connections {
+//        target: system_info
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage system_info")
+//            timeSetting.updateTime();
+//            dateSetting.updateDate();
+//            //page_manager.updatePageDone();
+//        }
+//    }
 
     Text {
         id: datetimeText

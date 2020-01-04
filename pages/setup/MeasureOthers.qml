@@ -26,18 +26,18 @@ Rectangle {
     visible: true
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: measure_others
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage measure.others")
-            sampleDectSw.updateSampleDect();
-            installPowerDrainSw.updateStatus();
-            enablePowerDrainSw.updateStatus();
-            customRangeUp.updateValue();
-            page_manager.updatePageDone();
-        }
-    }
+//    Connections {
+//        target: measure_others
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage measure.others")
+//            sampleDectSw.updateSampleDect();
+//            installPowerDrainSw.updateStatus();
+//            enablePowerDrainSw.updateStatus();
+//            customRangeUp.updateValue();
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     Text {
         id: sampleDectText
@@ -110,7 +110,7 @@ Rectangle {
             measure_others.addObjToTList("pwrdrain_enable", 0);
             prognosys_service.clearObjTList();
             prognosys_service.addObjToTList("pdrain_tube", 365);
-            page_manager.startSetPageList(["measure.others", "prognosys.service"]);
+            //page_manager.startSetPageList(["measure.others", "prognosys.service"]);
         }
 
         function reject()

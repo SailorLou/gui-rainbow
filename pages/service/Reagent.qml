@@ -30,15 +30,15 @@ Rectangle {
 
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: maintenance_reagent
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            bottleRepeater.updateReagent();
+//    Connections {
+//        target: maintenance_reagent
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            bottleRepeater.updateReagent();
 
-            page_manager.updatePageDone();
-        }
-    }
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     ListModel {
         id: bottleModel
@@ -300,7 +300,7 @@ Rectangle {
         text: qsTr("Cancel") + translator.tr
         onClicked: {
             console.debug("QML::clicked Cancel button")
-            page_manager.startUpdate("maintenance.reagent");
+            //page_manager.startUpdate("maintenance.reagent");
         }
     }
 

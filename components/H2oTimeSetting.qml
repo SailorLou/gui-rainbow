@@ -37,8 +37,8 @@ Rectangle {
     function init(hour, minute) {
         root.value[0] = hour;
         root.value[1] = minute;
-        tabItems.itemAt(0).value = hour;
-        tabItems.itemAt(1).value = minute;
+        //tabItems.itemAt(0).value = hour;
+        //tabItems.itemAt(1).value = minute;
     }
 
     Rectangle {

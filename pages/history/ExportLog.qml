@@ -42,44 +42,44 @@ Rectangle {
         z: 1
     }
 
-    Connections {
-        target: log_filter2
-        ignoreUnknownSignals: true
-        onProbeSetObjsDone: {
-            //console.debug("QML::QueryLog log_filter2")
-            /*var title = ["*.time", "ID"];
+//    Connections {
+//        target: log_filter2
+//        ignoreUnknownSignals: true
+//        onProbeSetObjsDone: {
+//            //console.debug("QML::QueryLog log_filter2")
+//            /*var title = ["*.time", "ID"];
 
-            //console.debug("QML::QueryLog setFilterTypeList: "+filterSettings.setFilterTypeList)
-            var param = {"title": title, "start": -1, "count": 20000, "type": filterSettings.setFilterTypeList, "orderby": "lambda x: datetime.datetime.strptime(x[1],'%Y-%m-%d %H:%M:%S')", "desc": true }; // x[0] - type; x[1] - time
-            log_export.setObj("read_data", param);*/
+//            //console.debug("QML::QueryLog setFilterTypeList: "+filterSettings.setFilterTypeList)
+//            var param = {"title": title, "start": -1, "count": 20000, "type": filterSettings.setFilterTypeList, "orderby": "lambda x: datetime.datetime.strptime(x[1],'%Y-%m-%d %H:%M:%S')", "desc": true }; // x[0] - type; x[1] - time
+//            log_export.setObj("read_data", param);*/
 
-            export_log.setSNBuff(system_info.getObjString("sn"));
-            export_log.setTypeList(filterSettings.setFilterTypeList);
-            export_log.startProcess();
-        }
-    }
+//            export_log.setSNBuff(system_info.getObjString("sn"));
+//            export_log.setTypeList(filterSettings.setFilterTypeList);
+//            export_log.startProcess();
+//        }
+//    }
 
-    Connections {
-        target: export_log
-        ignoreUnknownSignals: true
-        onFinished: {
-            //console.debug("QML::LogView SetObjDone export_log onFinished")
-            var err = export_log.error();
-            if(err === "")
-            {
-                mainMessageDialogOneButton.text = qsTr("Export log done.");
-            }
-            else
-            {
-                mainMessageDialogOneButton.text = qsTr(err);
-            }
+//    Connections {
+//        target: export_log
+//        ignoreUnknownSignals: true
+//        onFinished: {
+//            //console.debug("QML::LogView SetObjDone export_log onFinished")
+//            var err = export_log.error();
+//            if(err === "")
+//            {
+//                mainMessageDialogOneButton.text = qsTr("Export log done.");
+//            }
+//            else
+//            {
+//                mainMessageDialogOneButton.text = qsTr(err);
+//            }
 
-            mainBusyDialog.close();
-            mainMessageDialogOneButton.type = "reminder";
-            mainMessageDialogOneButton.open();
-            page_manager.setTimerRunning(true);
-        }
-    }
+//            mainBusyDialog.close();
+//            mainMessageDialogOneButton.type = "reminder";
+//            mainMessageDialogOneButton.open();
+//            page_manager.setTimerRunning(true);
+//        }
+//    }
 
 //    function updateLogModel()
 //    {
@@ -241,7 +241,7 @@ Rectangle {
                 if(filterSettings.setFilter(log_filter2))
                 {
                     mainBusyDialog.open(qsTr("Export..., this can take a few minutes.")+translator.tr)
-                    page_manager.setTimerRunning(false);
+                    //page_manager.setTimerRunning(false);
                 }
             } else {
                 mainMessageDialogOneButton.type = "warning";

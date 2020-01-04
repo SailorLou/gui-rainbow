@@ -74,15 +74,10 @@
         <file>content/TestDelegate.qml</file>
         <file>pages/service/TestAD.qml</file>
         <file>pages/service/TestIO.qml</file>
-        <file>language/rainbow_zh.qm</file>
         <file>utilities/common.cpp</file>
         <file>utilities/common.h</file>
-        <file>utilities/logexport.cpp</file>
-        <file>utilities/logexport.h</file>
         <file>utilities/systime.cpp</file>
         <file>utilities/systime.h</file>
-        <file>utilities/upgrade.cpp</file>
-        <file>utilities/upgrade.h</file>
         <file>main.cpp</file>
         <file>pages/ServiceMenu.qml</file>
         <file>pages/SetupMenu.qml</file>
@@ -126,7 +121,6 @@
         <file>components/H2oDateSetting.qml</file>
         <file>components/H2oLineCheckBox.qml</file>
         <file>components/H2oTimeSetting.qml</file>
-        <file>language/rainbow_en.qm</file>
         <file>pages/history/LogGraphic.qml</file>
         <file>pages/history/LogList.qml</file>
         <file>content/CaliPoint.qml</file>
@@ -195,20 +189,7 @@
         <file>main_testcase.cpp</file>
         <file>testprobe.cpp</file>
         <file>testprobe.h</file>
-        <file>objects/modbus_pages</file>
-        <file>objects/probe_pages</file>
-        <file>images/hach-font-icons.ttf</file>
         <file>fonts/NotoSans/NotoSans-Regular.ttf</file>
-        <file>scripts/entry.sh</file>
-        <file>images/Hach_login_image.png</file>
         <file>images/icomoon.ttf</file>
-        <file>images/hach-logo.png</file>
-        <file>images/prog_pumptube_01.PNG</file>
-        <file>images/prog_pumptube_02.PNG</file>
-        <file>images/prog_pumptube_03.PNG</file>
-        <file>images/prog_pumptube3_01.PNG</file>
-        <file>images/prog_pumptube3_02.PNG</file>
-        <file>images/prog_pumptube3_03.PNG</file>
-        <file>images/prog_valvetube_01.PNG</file>
     </qresource>
 </RCC>

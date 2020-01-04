@@ -29,17 +29,17 @@ Rectangle {
 
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: notification_concentration
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage notification.concentration")
-            highLimit.updateHighLimit();
-            lowLimit.updateLowLimit();
+//    Connections {
+//        target: notification_concentration
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage notification.concentration")
+//            highLimit.updateHighLimit();
+//            lowLimit.updateLowLimit();
 
-            page_manager.updatePageDone();
-        }
-    }
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     Text {
         id: lowLimitText

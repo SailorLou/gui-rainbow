@@ -22,16 +22,16 @@ import "../../components"
 Rectangle {
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: measure_range
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage measure.range")
-            listView.updateIndex();
+//    Connections {
+//        target: measure_range
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage measure.range")
+//            listView.updateIndex();
 
-            page_manager.updatePageDone();
-        }
-    }
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     H2oExclusiveGroup {
         id: tabGroup

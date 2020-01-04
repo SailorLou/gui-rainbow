@@ -44,7 +44,7 @@ Rectangle {
         anchors.top: processCircle.top
         anchors.left: processCircle.right
         anchors.leftMargin: 70
-        text: qsTr("Current version: ")+translator.tr + page_manager.mainVersion()
+        text: qsTr("Current version: ")+translator.tr;// + page_manager.mainVersion()
         font: mainTheme.mediumFont
     }
 
@@ -118,7 +118,7 @@ Rectangle {
                     upgradeMsgUpdateTimer.running = false;
                     updateStart.enabled = true;
                     mainMessage.buttonEnabled = true;
-                    page_manager.setTimerRunning(true);
+                    //page_manager.setTimerRunning(true);
 
                     /* restart log when if error */
                     var items = ["log_rawdata", "log_result", "log_auto"];
@@ -146,13 +146,13 @@ Rectangle {
     }
 
     /* Start Update MCU Firmware */
-    Connections {
-        target: software_upgrade
-        ignoreUnknownSignals: true
-        onStartUpdateMCU: {
-            startMCUFirmware();
-        }
-    }
+    //Connections {
+    //    target: software_upgrade
+    //    ignoreUnknownSignals: true
+    //    onStartUpdateMCU: {
+    //        startMCUFirmware();
+    //    }
+    //}
 
     Timer {
         id: queryProcessTimer
@@ -174,7 +174,7 @@ Rectangle {
             updateStart.enabled = false;
             mainMessage.buttonEnabled = false;
             /* Disable refreshing data */
-            page_manager.setTimerRunning(false);
+            //page_manager.setTimerRunning(false);
 
             /* Stop measure and stop log when upgrade */
             var items = ["log_rawdata", "log_result", "log_auto", "startgo"];

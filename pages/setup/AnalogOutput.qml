@@ -28,26 +28,26 @@ Rectangle {
     height: 420
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: io_ao
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            aoStatus.updateIOStatus();
-            ch1RangeList.updateCh1Range();
-            ch1ModeList.updateCh1Mode();
-            ch1Mapup.updateMapup();
-            ch1Mapdown.updateMapdown();
-            chTransfer.updateTransfer();
-            ch2RangeList.updateCh2Range();
-            ch2ModeList.updateCh2Mode();
-            ch2Mapup.updateMapup();
-            ch2Mapdown.updateMapdown();
-            //ch2Transfer.updateTransfer();
-            mainStackView.push({item: root, immediate: true})
-            console.debug("QML::UpdatePage io.ao");
-            page_manager.updatePageDone();
-        }
-    }
+//    Connections {
+//        target: io_ao
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            aoStatus.updateIOStatus();
+//            ch1RangeList.updateCh1Range();
+//            ch1ModeList.updateCh1Mode();
+//            ch1Mapup.updateMapup();
+//            ch1Mapdown.updateMapdown();
+//            chTransfer.updateTransfer();
+//            ch2RangeList.updateCh2Range();
+//            ch2ModeList.updateCh2Mode();
+//            ch2Mapup.updateMapup();
+//            ch2Mapdown.updateMapdown();
+//            //ch2Transfer.updateTransfer();
+//            mainStackView.push({item: root, immediate: true})
+//            console.debug("QML::UpdatePage io.ao");
+//            page_manager.updatePageDone();
+//        }
+//    }
 
 
     Rectangle {

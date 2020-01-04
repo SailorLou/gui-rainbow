@@ -28,7 +28,7 @@ Rectangle {
     width: 800
     height: 480
     color: "#f2f2f2"
-    visible: false
+    //visible: false
 
     property var mainWnd
 
@@ -107,7 +107,7 @@ Rectangle {
 
         FontLoader {
             id: icomoon
-            source: "qrc:///resources/images/hach-font-icons.ttf"
+            //source: "qrc:///resources/images/hach-font-icons.ttf"
         }
         property font veryhugeIcon: Qt.font({family: icomoon.name, pixelSize: 144})
         property font hugeIcon: Qt.font({family: icomoon.name, pixelSize: 72})
@@ -209,6 +209,12 @@ Rectangle {
         }
     }
 
+    Component.onCompleted: {
+        welcomePage.init();
+        dataInit.initDone()
+    }
+
+
     DataInit {
         id: dataInit
         onDataInitDone: {
@@ -225,10 +231,10 @@ Rectangle {
         function initDone()
         {
             //busyDialog.close();
-            mainRefreshTimer.running = true
+            //mainRefreshTimer.running = true
             screenSaver.init();
             //comm_terminal.createConnection();
-            mainWnd.closeWindow();
+            //mainWnd.closeWindow();
             contentWindow.visible = true;
             contentWindow.initialDone(); //signal for service tool
         }

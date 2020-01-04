@@ -80,9 +80,9 @@ Item {
             if(checkParamsNum(respondHandle, params, 1)) {
                 if(params[0] === "true")
                 {
-                    page_manager.setUserRepeat(true);
+                    //page_manager.setUserRepeat(true);
                 } else if(params[0] === "false") {
-                    page_manager.setUserRepeat(false);
+                    //page_manager.setUserRepeat(false);
                 }
 
                 respondHandle.respond("done");
@@ -248,8 +248,8 @@ Item {
             respondHandle.respond(respondMsg);
             break;
         case "version":
-            var ver = page_manager.mainVersion();
-            respondHandle.respond(ver);
+            //var ver = page_manager.mainVersion();
+            //respondHandle.respond(ver);
             break;
         case "reset_config":
             var acttime = 0;
@@ -274,7 +274,7 @@ Item {
 
             var setPageList = ["startup.initial", "io.modbus"];
 
-            page_manager.startSetPageList(setPageList);
+            //page_manager.startSetPageList(setPageList);
 
             respondHandle.respond("done");
             break;

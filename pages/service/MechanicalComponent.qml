@@ -23,16 +23,16 @@ Item {
     height: 360
     objectName: "mechanical page"
 
-    Connections {
-        target: status_page2
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage status.page2")
-            tableView.updateModel();
+//    Connections {
+//        target: status_page2
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage status.page2")
+//            tableView.updateModel();
 
-            page_manager.updatePageDone();
-        }
-    }
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     H2oTableView {
         id: tableView

@@ -35,15 +35,15 @@ Rectangle {
     width: 800
     height: 360
 
-    Connections {
-        target: io_main
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage io.main")
-            listView.updateIOList();
-            page_manager.updatePageDone();
-        }
-    }
+    //Connections {
+    //    target: io_main
+    //    ignoreUnknownSignals: true
+    //    onProbeUpdateDone: {
+    //        console.debug("QML::UpdatePage io.main")
+    //        listView.updateIOList();
+    //        page_manager.updatePageDone();
+    //    }
+    //}
 
     /*Timer {
         id: flashTimer
@@ -119,7 +119,7 @@ Rectangle {
                     }
 
                     console.debug("QML IOList to Detail: page name: "+mPageName)
-                    page_manager.startUpdate(mPageName);
+                    //page_manager.startUpdate(mPageName);
                 }
             }
         }

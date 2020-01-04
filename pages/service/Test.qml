@@ -82,7 +82,7 @@ Rectangle {
 
                 onClicked: {
                     mainStackView.push({item: testPageList[index], immediate: true})
-                    page_manager.startUpdate(name)
+                    //page_manager.startUpdate(name)
                 }
             }
         }

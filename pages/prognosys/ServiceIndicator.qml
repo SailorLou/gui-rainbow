@@ -25,16 +25,16 @@ Rectangle {
     objectName: "service indictor"
     property string title: qsTr("Service Indicator")+translator.tr
 
-    Connections {
-        target: prognosys_service
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
+//    Connections {
+//        target: prognosys_service
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
 
-            tableView.updateModel();
-            page_manager.updatePageDone();
-            console.debug("QML::ServiceIndicator update page")
-        }
-    }
+//            tableView.updateModel();
+//            page_manager.updatePageDone();
+//            console.debug("QML::ServiceIndicator update page")
+//        }
+//    }
 
     H2oTableView {
         id: tableView

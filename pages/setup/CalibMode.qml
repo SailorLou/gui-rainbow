@@ -25,17 +25,17 @@ Rectangle {
 
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: calibration_mode
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage calibration.mode")
-            listView.updateIndex();
-            postFlush.updatePostFlush();
+//    Connections {
+//        target: calibration_mode
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            console.debug("QML::UpdatePage calibration.mode")
+//            listView.updateIndex();
+//            postFlush.updatePostFlush();
 
-            page_manager.updatePageDone();
-        }
-    }
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     H2oExclusiveGroup {
         id: tabGroup

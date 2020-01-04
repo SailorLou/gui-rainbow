@@ -37,48 +37,48 @@ Rectangle {
         y: 8
     }
 
-    Connections {
-        target: prognosys_indicator
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
+    //    Connections {
+    //        target: prognosys_indicator
+    //        ignoreUnknownSignals: true
+    //        onProbeUpdateDone: {
 
-            if(mainPrognosysMgr.prognosysEnabled) {
-                var min = prognosys_indicator.getObjInt("service");
-                serviceDiagnosys.indictor = min
-                var p = prognosys_indicator.getObjInt("measure");
-                measureDiagnosys.indictor = p;
-            }
+    //            if(mainPrognosysMgr.prognosysEnabled) {
+    //                var min = prognosys_indicator.getObjInt("service");
+    //                serviceDiagnosys.indictor = min
+    //                var p = prognosys_indicator.getObjInt("measure");
+    //                measureDiagnosys.indictor = p;
+    //            }
 
-            page_manager.updatePageDone();
-        }
-    }
+    //            page_manager.updatePageDone();
+    //        }
+    //    }
 
-    Connections {
-        target: latest_measure
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            console.debug("QML::UpdatePage latest.measure")
-            measureValue.updateValue();
-            progressCircle.updateStartGo();
-            //lastMeasureTime.updateMeasureTime();
+    //    Connections {
+    //        target: latest_measure
+    //        ignoreUnknownSignals: true
+    //        onProbeUpdateDone: {
+    //            console.debug("QML::UpdatePage latest.measure")
+    //            measureValue.updateValue();
+    //            progressCircle.updateStartGo();
+    //            //lastMeasureTime.updateMeasureTime();
 
-            page_manager.updatePageDone();
-        }
-    }
+    //            page_manager.updatePageDone();
+    //        }
+    //    }
 
-    Connections {
-        target: current_measure
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            //console.debug("QML::UpdatePage Home current.measure")
-            process.updateProcess();
-            subProcess.updateSubProcess();
-            progressCircle.updateProgress();
-            lastMeasureTime.updateMeasureTime();
-            //remainTime.updateRemainTime();
-            page_manager.updatePageDone();
-        }
-    }
+    //    Connections {
+    //        target: current_measure
+    //        ignoreUnknownSignals: true
+    //        onProbeUpdateDone: {
+    //            //console.debug("QML::UpdatePage Home current.measure")
+    //            process.updateProcess();
+    //            subProcess.updateSubProcess();
+    //            progressCircle.updateProgress();
+    //            lastMeasureTime.updateMeasureTime();
+    //            //remainTime.updateRemainTime();
+    //            page_manager.updatePageDone();
+    //        }
+    //    }
 
     //Component.onCompleted: {
     //    page_manager.startUpdate(latest_measure.orgName());

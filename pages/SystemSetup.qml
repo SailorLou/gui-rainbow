@@ -55,7 +55,7 @@ Rectangle {
                 if(objName.length > 0) {
                     var pageName = mainStackView.currentItem.objectName;
                     if(pageName == "system_setup") {
-                        page_manager.startUpdate(root.pageName[tabView.currentIndex]);
+                        //page_manager.startUpdate(root.pageName[tabView.currentIndex]);
                         updatePage();
                     }
 
@@ -94,7 +94,7 @@ Rectangle {
         viewList: tabList
         titleList: tabTitles
         onCurrentIndexChanged: {
-            page_manager.startUpdate(root.pageName[tabView.currentIndex])
+            ///page_manager.startUpdate(root.pageName[tabView.currentIndex])
             updatePage();
 
             if(model.get(tabView.preIndex).name === "Date&Time" && timeSetup.timeBtnEnabled)

@@ -26,16 +26,16 @@ Item {
     height: 360
     enabled: mainPermisMgr.editabled
 
-    Connections {
-        target: system_info
-        ignoreUnknownSignals: true
-        onProbeUpdateDone: {
-            // console.debug("QML::Instr Alias ")
-            aliasText.updateAliasText();
+//    Connections {
+//        target: system_info
+//        ignoreUnknownSignals: true
+//        onProbeUpdateDone: {
+//            // console.debug("QML::Instr Alias ")
+//            aliasText.updateAliasText();
 
-            page_manager.updatePageDone();
-        }
-    }
+//            page_manager.updatePageDone();
+//        }
+//    }
 
     H2oTextField {
         id: aliasText
